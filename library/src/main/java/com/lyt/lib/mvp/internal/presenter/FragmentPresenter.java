@@ -74,7 +74,6 @@ public abstract class FragmentPresenter<T extends IDelegate, D extends IMode> ex
             savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         viewDelegate.create(inflater, container, savedInstanceState);
-        DensityManager.setCustomDensity(this.getActivity(), this.getActivity().getApplication());
         return viewDelegate.getRootView();
     }
 

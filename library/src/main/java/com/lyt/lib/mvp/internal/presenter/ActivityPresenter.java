@@ -60,7 +60,6 @@ public abstract class ActivityPresenter<T extends IDelegate, D extends IMode> ex
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = this;
-        DensityManager.setCustomDensity(this, this.getApplication());
         viewDelegate.create(getLayoutInflater(), null, savedInstanceState);
         setContentView(viewDelegate.getRootView());
         initToolbar();
